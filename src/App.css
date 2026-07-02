@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#f8f6f3;
+    color:#1d1d1d;
+}
+
+.home{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+}
+
+.content{
+    width:100%;
+    max-width:1400px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:start; /* ← FIXED: ensures left column aligns at the top */
+}
+
+.about h1{
+    font-size:4rem;
+    font-weight:300;
+    letter-spacing:8px;
+    margin-bottom:55px;
+}
+
+.list{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.item{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    font-size:1.05rem;
+    color:#444;
+    line-height:1.7;
+    transition:.25s;
+}
+
+.item svg{
+    margin-top:5px;
+    color:#888;
+    flex-shrink:0;
+}
+
+.item:hover{
+    transform:translateX(8px);
+    color:#000;
+}
+
+.illustration{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.drawing-placeholder{
+    width:420px;
+    height:500px;
+}
+
+.name-placeholder{
+    margin-top:30px;
+    width:300px;
+    height:180px;
+    border:2px solid #d6d1cb;
+    border-radius:18px;
+    background:rgba(255,255,255,.35);
+}
+
+@media (max-width:900px){
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    .illustration{
+        display:none;
+    }
+
+    .about h1{
+        font-size:3rem;
+    }
+
+    .home{
+        padding:35px;
+    }
+}
