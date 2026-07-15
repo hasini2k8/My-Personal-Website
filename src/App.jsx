@@ -1,9 +1,9 @@
 import { useRef, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Project from "./Project";
-import Blog from "./Blog";
+import Home from "./Home.jsx";
+import About from "./About.jsx";
+import Project from "./Project.jsx";
+import Blog from "./Blog.jsx";
 
 export default function App() {
   const audioRef = useRef(null);
